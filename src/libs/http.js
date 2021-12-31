@@ -6,4 +6,10 @@ async function httpGet(url) {
   return resHttpGet;
 }
 
-export { httpGet }
+async function httpPost(url, data) {
+  const httpPost = await axios.post(url, data);
+  const resHttpPost = httpPost.data;
+  return resHttpPost;
+}
+
+export { httpGet, httpPost };
