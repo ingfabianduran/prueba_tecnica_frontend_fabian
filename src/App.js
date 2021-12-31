@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { Container, Grid } from 'semantic-ui-react';
+import { Navbar } from './components/Components/Navbar';
+import { FormCliente } from './components/Cliente/FormCliente';
+import {  } from './css/index.css';
 
 function App() {
+  const [cliente, setCliente] = useState({
+    nombre: "",
+    apellido: "",
+    cedula: "",
+    celular: "",
+    correo: "",
+    terminos: true,
+    ciudad: ""
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Navbar></Navbar>
+      <Container>
+        <Grid verticalAlign='middle' centered>
+          <Grid.Row className='row-main'>
+            <Grid.Column width={16}>
+              <FormCliente
+                cliente={cliente}>
+              </FormCliente>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      </Container>
+    </React.Fragment>
   );
 }
 

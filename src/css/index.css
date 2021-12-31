@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap');
+:root {
+    --my-font: 'Open Sans Condensed';
+    --my-color-background: #F2F2F2;
+}
+#root {
+    background-color: var(--my-color-background);
+    font-family: var(--my-font), sans-serif !important;
+}
+input {
+    font-family: var(--my-font), sans-serif !important;
+}
+.ui {
+    font-family: var(--my-font), sans-serif !important;
+}
+.header  {
+    font-family: var(--my-font), sans-serif !important;
+}
+.row-main {
+    height: 100vh;
+}
+.font-main {
+    font-family: var(--my-font), sans-serif !important;
+}
